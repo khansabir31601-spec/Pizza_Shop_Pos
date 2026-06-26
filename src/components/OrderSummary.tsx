@@ -17,19 +17,19 @@ export default function OrderSummary({ subtotal, discount, tax, grandTotal }: Or
       <div className="space-y-1 text-sm">
         <div className="flex justify-between text-slate-500 dark:text-slate-400">
           <span>Subtotal</span>
-          <span className="tabular-nums">${subtotal.toFixed(2)}</span>
+          <span className="tabular-nums">Rs. {subtotal.toFixed(2)}</span>
         </div>
         <div className="flex justify-between text-emerald-600 dark:text-emerald-400">
           <span>Discount (10%)</span>
-          <span className="tabular-nums">-${discount.toFixed(2)}</span>
+          <span className="tabular-nums">-Rs. {discount.toFixed(2)}</span>
         </div>
         <div className="flex justify-between text-slate-500 dark:text-slate-400">
           <span>Tax (8%)</span>
-          <span className="tabular-nums">${tax.toFixed(2)}</span>
+          <span className="tabular-nums">Rs. {tax.toFixed(2)}</span>
         </div>
         <div className="border-t border-slate-200 dark:border-slate-700 pt-2 mt-2 flex justify-between items-center">
           <span className="text-sm font-bold text-slate-800 dark:text-white">Grand Total</span>
-          <span className="text-lg font-bold text-orange-600 dark:text-orange-400 tabular-nums">${grandTotal.toFixed(2)}</span>
+          <span className="text-lg font-bold text-orange-600 dark:text-orange-400 tabular-nums">Rs. {grandTotal.toFixed(2)}</span>
         </div>
       </div>
     </div>

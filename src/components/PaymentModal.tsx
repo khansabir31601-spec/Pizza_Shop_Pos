@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Wallet, CreditCard, QrCode, Printer, DollarSign } from 'lucide-react';
+import { X, Wallet, CreditCard, QrCode, Printer } from 'lucide-react';
 import type { PaymentMethod } from '../types';
 
 interface PaymentModalProps {
@@ -32,7 +32,7 @@ export default function PaymentModal({ grandTotal, onConfirm, onCancel }: Paymen
         <div className="p-4 space-y-4">
           <div className="text-center py-4 px-3 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/10 dark:to-red-900/10 border border-orange-100 dark:border-orange-800/20">
             <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Total Amount</p>
-            <p className="text-3xl font-bold text-orange-600 dark:text-orange-400 tabular-nums">${grandTotal.toFixed(2)}</p>
+            <p className="text-3xl font-bold text-orange-600 dark:text-orange-400 tabular-nums">Rs. {grandTotal.toFixed(2)}</p>
           </div>
 
           <div>
@@ -59,7 +59,7 @@ export default function PaymentModal({ grandTotal, onConfirm, onCancel }: Paymen
             <div className="animate-slideUp">
               <p className="text-xs font-semibold text-slate-600 dark:text-slate-400 mb-2">Amount Received</p>
               <div className="relative mb-2">
-                <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">Rs.</span>
                 <input
                   type="number"
                   value={amountReceived}
@@ -80,14 +80,14 @@ export default function PaymentModal({ grandTotal, onConfirm, onCancel }: Paymen
                         : 'border-slate-200 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
                     }`}
                   >
-                    ${amt.toFixed(2)}
+                    Rs. {amt.toFixed(2)}
                   </button>
                 ))}
               </div>
               {change >= 0 && (
                 <div className="flex justify-between items-center mt-3 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-800/20">
                   <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Change Due</span>
-                  <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">${change.toFixed(2)}</span>
+                  <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">Rs. {change.toFixed(2)}</span>
                 </div>
               )}
             </div>

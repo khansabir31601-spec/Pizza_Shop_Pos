@@ -115,11 +115,11 @@ export default function CouponsPage() {
                         ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/20 dark:text-blue-400'
                         : 'bg-purple-100 text-purple-700 dark:bg-purple-900/20 dark:text-purple-400'
                     }`}>
-                      {coupon.type === 'percentage' ? '%' : '$'}
+                      {coupon.type === 'percentage' ? '%' : 'Rs.'}
                     </span>
                   </td>
                   <td className="p-3 font-semibold text-slate-800 dark:text-white tabular-nums">
-                    {coupon.type === 'percentage' ? `${coupon.discount}%` : `$${coupon.discount.toFixed(2)}`}
+                    {coupon.type === 'percentage' ? `${coupon.discount}%` : `Rs. ${coupon.discount.toFixed(2)}`}
                   </td>
                   <td className="p-3 text-slate-500 tabular-nums">{coupon.expiry}</td>
                   <td className="p-3">

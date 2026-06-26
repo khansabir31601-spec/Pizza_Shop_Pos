@@ -81,7 +81,7 @@ export default function RecentOrdersModal({ orders, onClose, onViewReceipt, onPr
                     </p>
                   </div>
                   <div className="flex items-center gap-1.5 flex-shrink-0">
-                    <span className="text-sm font-bold text-orange-600 dark:text-orange-400 mr-1 tabular-nums">${order.grandTotal.toFixed(2)}</span>
+                    <span className="text-sm font-bold text-orange-600 dark:text-orange-400 mr-1 tabular-nums">Rs. {order.grandTotal.toFixed(2)}</span>
                     <button onClick={() => onViewReceipt(order)} className="p-1.5 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-400 hover:text-orange-500 transition-colors" title="View Receipt">
                       <Eye className="w-3.5 h-3.5" />
                     </button>

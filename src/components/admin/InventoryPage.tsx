@@ -207,7 +207,7 @@ export default function InventoryPage() {
       key: 'costPerUnit',
       header: 'Cost',
       className: 'hidden md:table-cell',
-      render: (item: InventoryItem) => <span className="text-slate-600 dark:text-slate-300">${item.costPerUnit.toFixed(2)}</span>,
+      render: (item: InventoryItem) => <span className="text-slate-600 dark:text-slate-300">Rs. {item.costPerUnit.toFixed(2)}</span>,
     },
     {
       key: 'lastRestocked',
@@ -414,7 +414,7 @@ export default function InventoryPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Cost per Unit ($)</label>
+            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Cost per Unit (Rs.)</label>
             <input
               type="number"
               min={0}

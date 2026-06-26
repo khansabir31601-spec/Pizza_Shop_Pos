@@ -106,11 +106,11 @@ export default function ProductsPage() {
     },
     {
       key: 'price', header: 'Price', className: 'font-semibold text-slate-800 dark:text-white',
-      render: (p: Product) => `$${p.price.toFixed(2)}`,
+      render: (p: Product) => `Rs. ${p.price.toFixed(2)}`,
     },
     {
       key: 'cost', header: 'Cost', className: 'text-slate-500 dark:text-slate-400 hidden sm:table-cell',
-      render: (p: Product) => `$${p.cost.toFixed(2)}`,
+      render: (p: Product) => `Rs. ${p.cost.toFixed(2)}`,
     },
     {
       key: 'stock', header: 'Stock', className: 'text-center',
@@ -260,7 +260,7 @@ export default function ProductsPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">Price ($)</label>
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">Price (Rs.)</label>
                   <input
                     type="number"
                     step="0.01"
@@ -271,7 +271,7 @@ export default function ProductsPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">Cost ($)</label>
+                  <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">Cost (Rs.)</label>
                   <input
                     type="number"
                     step="0.01"

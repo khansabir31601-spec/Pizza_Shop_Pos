@@ -17,7 +17,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }: CartItemP
       />
       <div className="flex-1 min-w-0">
         <p className="text-xs font-semibold text-slate-800 dark:text-white truncate">{item.name}</p>
-        <p className="text-[11px] font-medium text-orange-600 dark:text-orange-400">${item.price.toFixed(2)}</p>
+        <p className="text-[11px] font-medium text-orange-600 dark:text-orange-400">Rs. {item.price.toFixed(2)}</p>
       </div>
       <div className="flex items-center gap-0.5 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-600 shadow-sm">
         <button
@@ -35,7 +35,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }: CartItemP
         </button>
       </div>
       <span className="text-xs font-bold text-slate-800 dark:text-white w-14 text-right tabular-nums">
-        ${(item.price * item.quantity).toFixed(2)}
+        Rs. {(item.price * item.quantity).toFixed(2)}
       </span>
       <button
         onClick={() => onRemove(item.id)}

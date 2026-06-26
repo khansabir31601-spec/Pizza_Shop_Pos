@@ -119,8 +119,8 @@ export default function DealsPage() {
                     <img src={deal.image} alt={deal.name} className="w-10 h-10 rounded-lg object-cover" />
                   </td>
                   <td className="p-3 font-medium text-slate-800 dark:text-white">{deal.name}</td>
-                  <td className="p-3 text-slate-600 dark:text-slate-400 tabular-nums">${deal.originalPrice.toFixed(2)}</td>
-                  <td className="p-3 font-semibold text-emerald-600 dark:text-emerald-400 tabular-nums">${deal.offerPrice.toFixed(2)}</td>
+                  <td className="p-3 text-slate-600 dark:text-slate-400 tabular-nums">Rs. {deal.originalPrice.toFixed(2)}</td>
+                  <td className="p-3 font-semibold text-emerald-600 dark:text-emerald-400 tabular-nums">Rs. {deal.offerPrice.toFixed(2)}</td>
                   <td className="p-3">
                     <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-700 dark:bg-orange-900/20 dark:text-orange-400">
                       {discountPercent(deal.originalPrice, deal.offerPrice)}% OFF

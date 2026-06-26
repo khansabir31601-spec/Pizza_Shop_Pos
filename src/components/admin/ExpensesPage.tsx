@@ -10,7 +10,7 @@ const emptyExpense: Omit<Expense, 'id'> = {
 };
 
 function formatCurrency(v: number) {
-  return '$' + v.toFixed(2);
+  return 'Rs. ' + v.toFixed(2);
 }
 
 export default function ExpensesPage() {

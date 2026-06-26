@@ -43,24 +43,24 @@ export function ReceiptContent({ order }: { order: Order }) {
             <tr key={i}>
               <td style={{ textAlign: 'left', padding: '2px 4px' }}>{item.name}</td>
               <td style={{ textAlign: 'center', padding: '2px 4px' }}>{item.quantity}</td>
-              <td style={{ textAlign: 'right', padding: '2px 4px' }}>${item.price.toFixed(2)}</td>
-              <td style={{ textAlign: 'right', padding: '2px 4px' }}>${(item.price * item.quantity).toFixed(2)}</td>
+              <td style={{ textAlign: 'right', padding: '2px 4px' }}>Rs. {item.price.toFixed(2)}</td>
+              <td style={{ textAlign: 'right', padding: '2px 4px' }}>Rs. {(item.price * item.quantity).toFixed(2)}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <div style={{ borderTop: '1px dashed #000', paddingTop: 4, marginBottom: 6 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, padding: '1px 0' }}><span>Subtotal:</span><span>${order.subtotal.toFixed(2)}</span></div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, padding: '1px 0', color: '#15803d' }}><span>Discount:</span><span>-${order.discount.toFixed(2)}</span></div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, padding: '1px 0' }}><span>Tax (8%):</span><span>${order.tax.toFixed(2)}</span></div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', fontSize: 14, marginTop: 4, paddingTop: 4, borderTop: '1px solid #000' }}><span>TOTAL:</span><span>${order.grandTotal.toFixed(2)}</span></div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, padding: '1px 0' }}><span>Subtotal:</span><span>Rs. {order.subtotal.toFixed(2)}</span></div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, padding: '1px 0', color: '#15803d' }}><span>Discount:</span><span>-Rs. {order.discount.toFixed(2)}</span></div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, padding: '1px 0' }}><span>Tax (8%):</span><span>Rs. {order.tax.toFixed(2)}</span></div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', fontSize: 14, marginTop: 4, paddingTop: 4, borderTop: '1px solid #000' }}><span>TOTAL:</span><span>Rs. {order.grandTotal.toFixed(2)}</span></div>
       </div>
       <div style={{ marginBottom: 6, paddingBottom: 6, borderBottom: '1px dashed #000', fontSize: 10 }}>
         <div>Payment: {order.paymentMethod}</div>
         {order.paymentMethod === 'Cash' && (
           <>
-            <div>Received: ${order.amountReceived.toFixed(2)}</div>
-            <div>Change: ${order.change.toFixed(2)}</div>
+            <div>Received: Rs. {order.amountReceived.toFixed(2)}</div>
+            <div>Change: Rs. {order.change.toFixed(2)}</div>
           </>
         )}
       </div>

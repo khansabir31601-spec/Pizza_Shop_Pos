@@ -24,7 +24,7 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
         )}
         {product.cost > product.price && (
           <div className="absolute top-2 right-2 px-2 py-0.5 bg-orange-500 text-white text-[10px] font-bold rounded-full shadow">
-            SAVE ${(product.cost - product.price).toFixed(2)}
+            SAVE Rs. {(product.cost - product.price).toFixed(2)}
           </div>
         )}
         <div className="absolute top-2 left-2 px-2 py-0.5 bg-black/50 text-white text-[10px] rounded-full backdrop-blur-sm border border-white/10">
@@ -37,9 +37,9 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
         <div className="flex items-center justify-between mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-700">
           <div className="flex items-center gap-1.5">
             {product.cost > product.price && (
-              <span className="text-xs text-slate-400 line-through">${product.cost.toFixed(2)}</span>
+              <span className="text-xs text-slate-400 line-through">Rs. {product.cost.toFixed(2)}</span>
             )}
-            <span className="text-base font-bold text-orange-600 dark:text-orange-400">${product.price.toFixed(2)}</span>
+            <span className="text-base font-bold text-orange-600 dark:text-orange-400">Rs. {product.price.toFixed(2)}</span>
           </div>
           <button
             onClick={() => onAddToCart(product)}

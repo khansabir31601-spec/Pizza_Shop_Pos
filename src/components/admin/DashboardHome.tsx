@@ -73,7 +73,7 @@ export default function DashboardHome() {
     { key: 'customerName', header: 'Customer', className: 'text-slate-600 dark:text-slate-300' },
     {
       key: 'grandTotal', header: 'Amount', className: 'font-semibold text-slate-800 dark:text-white',
-      render: (o: Order) => `$${o.grandTotal.toFixed(2)}`,
+      render: (o: Order) => `Rs. ${o.grandTotal.toFixed(2)}`,
     },
     {
       key: 'paymentMethod', header: 'Payment',
@@ -107,16 +107,16 @@ export default function DashboardHome() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatsCard icon={DollarSign} label="Today's Sales" value={`$${todaySales.toFixed(2)}`} color="green" />
-        <StatsCard icon={TrendingUp} label="Weekly Sales" value={`$${weeklySales.toFixed(2)}`} color="blue" />
-        <StatsCard icon={Calendar} label="Monthly Sales" value={`$${monthlySales.toFixed(2)}`} color="purple" />
+        <StatsCard icon={DollarSign} label="Today's Sales" value={`Rs. ${todaySales.toFixed(2)}`} color="green" />
+        <StatsCard icon={TrendingUp} label="Weekly Sales" value={`Rs. ${weeklySales.toFixed(2)}`} color="blue" />
+        <StatsCard icon={Calendar} label="Monthly Sales" value={`Rs. ${monthlySales.toFixed(2)}`} color="purple" />
         <StatsCard icon={ShoppingBag} label="Total Orders" value={totalOrders} color="orange" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatsCard icon={Landmark} label="Revenue" value={`$${revenue.toFixed(2)}`} color="green" />
-        <StatsCard icon={ArrowDownCircle} label="Expenses" value={`$${expenseTotal.toFixed(2)}`} color="red" />
-        <StatsCard icon={TrendingUp} label="Profit" value={`$${profit.toFixed(2)}`} color="green" trend={{ value: 12.5, positive: profit > 0 }} />
+        <StatsCard icon={Landmark} label="Revenue" value={`Rs. ${revenue.toFixed(2)}`} color="green" />
+        <StatsCard icon={ArrowDownCircle} label="Expenses" value={`Rs. ${expenseTotal.toFixed(2)}`} color="red" />
+        <StatsCard icon={TrendingUp} label="Profit" value={`Rs. ${profit.toFixed(2)}`} color="green" trend={{ value: 12.5, positive: profit > 0 }} />
         <StatsCard icon={AlertTriangle} label="Low Stock Items" value={lowStockItems} color="red" />
       </div>
 
