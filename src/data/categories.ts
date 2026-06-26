@@ -1,0 +1,68 @@
+import type { Category } from '../types';
+
+export const categories: Category[] = [
+  {
+    id: 'cat-pizza',
+    name: 'Pizza',
+    description: 'Hand-tossed pizzas made with fresh dough and premium toppings',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300&h=200&fit=crop',
+    productCount: 5,
+    status: 'active',
+  },
+  {
+    id: 'cat-burgers',
+    name: 'Burgers',
+    description: 'Juicy beef and chicken burgers with fresh ingredients',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop',
+    productCount: 4,
+    status: 'active',
+  },
+  {
+    id: 'cat-fries',
+    name: 'Fries',
+    description: 'Crispy golden fries and loaded creations',
+    image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300&h=200&fit=crop',
+    productCount: 3,
+    status: 'active',
+  },
+  {
+    id: 'cat-chicken',
+    name: 'Chicken',
+    description: 'Crispy fried chicken, wings, and wraps',
+    image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=300&h=200&fit=crop',
+    productCount: 3,
+    status: 'active',
+  },
+  {
+    id: 'cat-drinks',
+    name: 'Drinks',
+    description: 'Refreshing sodas, lemonade, iced tea, and milkshakes',
+    image: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300&h=200&fit=crop',
+    productCount: 4,
+    status: 'active',
+  },
+  {
+    id: 'cat-desserts',
+    name: 'Desserts',
+    description: 'Sweet treats including brownies, pies, and ice cream',
+    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&h=200&fit=crop',
+    productCount: 3,
+    status: 'active',
+  },
+  {
+    id: 'cat-salads',
+    name: 'Salads',
+    description: 'Fresh and healthy salad options',
+    image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=300&h=200&fit=crop',
+    productCount: 2,
+    status: 'active',
+  },
+  {
+    id: 'cat-extras',
+    name: 'Extras',
+    description: 'Sides and add-ons to complete your meal',
+    image: 'https://images.unsplash.com/photo-1619535860434-ba1d8fa125d0?w=300&h=200&fit=crop',
+    productCount: 3,
+    status: 'active',
+  },
+];

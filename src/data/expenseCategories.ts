@@ -1,0 +1,17 @@
+export const expenseCategories: string[] = [
+  'Rent',
+  'Electricity',
+  'Gas',
+  'Salaries',
+  'Internet',
+  'Marketing',
+  'Maintenance',
+  'Insurance',
+  'Supplies',
+  'Licensing',
+  'Repairs',
+  'Advertising',
+  'Water',
+  'Waste Management',
+  'Security',
+];
